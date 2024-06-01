@@ -1,13 +1,11 @@
-import Wave from "../others/Wave";
+"use client";
 
-export default function ContactPage(){
+import { Box, Typography } from "@mui/material";
+
+export default function ContactPage() {
   return (
-  <>
-      <Wave/>
-  <section className="min-h-[30dvh] p-30 bg-gradient-to-t from-indigo-300 via-teal-100 to-white">
-          
-
-  </section>
-  </>
-  )
+    <Box className="bg-slate-900 text-center">
+      <Typography variant="h3">Get in touch with me</Typography>
+    </Box>
+  );
 }

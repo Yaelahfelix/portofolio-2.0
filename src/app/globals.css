@@ -1,12 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "react-slideshow-image/dist/styles.css";
 
-@layer components{
+@layer components {
   .section-default {
-    @apply p-32 min-h-[100dvh]
+    @apply p-10 lg:p-32 min-h-[100dvh];
   }
-  h1{
-    @apply lg:text-[52px] font-bold
+  h1 {
+    @apply text-[32px] lg:text-[52px] font-bold;
   }
+  h2 {
+    @apply lg:text-[32px];
+  }
+  body {
+    @apply bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black;
+  }
+}
+.cursor {
+  position: fixed;
+  width: 30px; /* Ukuran roket */
+  height: 30px;
+  z-index: 9999;
+  pointer-events: none; /* Pastikan cursor tidak menghalangi event mouse */
+  background-image: url("../../public/icon/cursor.cur"); /* URL gambar roket */
+  background-size: contain;
+  background-repeat: no-repeat;
 }

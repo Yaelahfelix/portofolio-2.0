@@ -21,8 +21,8 @@ interface Props {
 }
 function Card({ file, name }: Props) {
   return (
-    <motion.div className="bubble">
-      <Image src={`/icon/skills/${file}`} alt={name} width={40} height={40} />
+    <motion.div className="relative w-10 h-10">
+      <Image src={`/icon/skills/${file}`} alt={name} fill />
     </motion.div>
   );
 }
@@ -45,14 +45,14 @@ function App({ }: AppProps) {
         await containerControls.start({
           x: -ref.current.scrollWidth,
           transition: {
-            duration: 5,
+            duration: 10,
             ease: "linear",
             repeat: Infinity,
           },
           onAnimationStart: (progress) => {
             containerControls.start({
               transition: {
-                duration: data.length,
+                duration: 10,
                 ease: "linear",
                 repeat: Infinity,
               },
@@ -74,7 +74,7 @@ function App({ }: AppProps) {
   return (
     <div className="overflow-hidden">
       <motion.div
-        className="flex overflow-hidden"
+        className="flex w-full"
         ref={ref}
         animate={containerControls}
         initial={{ x: '100%' }}

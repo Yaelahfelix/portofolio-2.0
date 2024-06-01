@@ -1,46 +1,38 @@
-'use client'
+"use client";
 
-import React, { useState } from "react"
-import { motion } from "framer-motion"
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ProjectType } from "@/lib/project";
+import { Slide } from "react-slideshow-image";
+import Image from "next/image";
 
-const ProjectCard: React.FC = () => {
-  const [titleHover, setTitleHover] = useState(false)
+const ProjectCard: React.FC<ProjectType> = ({
+  description,
+  typeProject,
+  title,
+  skills,
+  images,
+}) => {
   return (
-    <motion.div className="flex w-full rounded-xl overflow-hidden shadow bg-gradient-to-tr from-slate-400 via-neutral-300 to-teal-200"
-      onHoverStart={() => setTitleHover(true)}
-      onHoverEnd={() => setTitleHover(false)}
-
-    >
-      <div className="w-4/12 bg-white">
-
+    <div className="slide-container w-full md:w-6/12 lg:w-4/12 bg-white shadow-[-2px_10px_23px_4px_#718096] rounded-lg overflow-hidden">
+      <Slide>
+        {images.map((slideImage, index) => (
+          <div key={index}>
+            <div className="relative w-full aspect-[3/1]">
+              <Image src={"/project" + slideImage.url} fill alt="" />
+            </div>
+          </div>
+        ))}
+      </Slide>
+      <div className="text-black">
+        <div className="px-5 py-4">
+          <h6 className="font-bold text-teal-700">{title}</h6>
+          <p className="text-sm">{typeProject}</p>
+          <p className="text-slate-600 text-xs">{skills}</p>
+        </div>
       </div>
-      <motion.div className=" w-8/12 text-black px-10 py-20" >
+    </div>
+  );
+};
 
-        {/* Title */}
-        <motion.div animate={{
-          y: titleHover ? -20 : 0
-        }}>
-          <motion.h4 animate={{
-            fontSize: titleHover ? "30px" : "50px"
-          }}>SiPintarBNI</motion.h4>
-          <motion.h6 animate={{
-            fontSize: titleHover ? "14px" : "16px"
-          }}>Typescript, React</motion.h6>
-        </motion.div>
-
-        {/* Desc */}
-        <motion.div>
-          <motion.p
-            className="text-[14px]"
-            animate={{
-              opacity: titleHover ? 1 : 0,
-              height: titleHover  ? "auto" : 0
-            }}
-          >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</motion.p>
-        </motion.div>
-      </motion.div>
-    </motion.div>
-  )
-}
-
-export default ProjectCard
+export default ProjectCard;
