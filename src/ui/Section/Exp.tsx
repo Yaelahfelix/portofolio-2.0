@@ -94,7 +94,7 @@ export function ExperienceMobileSection() {
           </Typography>
           <div className="flex flex-col">
             {workOrgList.map((item) => (
-              <div className="py-3">
+              <div className="py-3" key={item.name}>
                 <div className="flex justify-between items-center mb-2">
                   <div className="">
                     <h6 className="text-md text-teal-300 font-semibold">
@@ -120,7 +120,7 @@ export function ExperienceMobileSection() {
           </Typography>
           <div className="flex flex-col ">
             {achievementList.map((item) => (
-              <div className="flex justify-between items-center mb-2 gap-3 py-3">
+              <div className="flex justify-between items-center mb-2 gap-3 py-3" key={item.name}>
                 <div className="">
                   <h6 className="text-md text-teal-300 font-semibold">
                     {item.name}

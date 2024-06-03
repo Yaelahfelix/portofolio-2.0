@@ -16,6 +16,7 @@ const variants = {
       delay: i * 0.2,
     },
   }),
+}
 
 export default function GalleryAbout(){
     return (
