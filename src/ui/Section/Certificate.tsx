@@ -11,7 +11,7 @@ export default function CertifiaceSection() {
       <ImageList cols={3} gap={8} rowHeight="auto">
         {certificateList.map((item, index) => (
           <ImageListItem key={index}>
-            <img
+            <Image
               src={item.img}
               alt={`Image ${index + 1}`}
               layout="responsive"

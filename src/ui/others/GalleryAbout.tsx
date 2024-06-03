@@ -11,7 +11,7 @@ const images = [
 
 const variants = {
   hidden: { opacity: 0, rotateY: -90 },
-  visible: (i) => ({
+  visible: (i : any) => ({
     opacity: 1,
     rotateY: 0,
     transition: {

@@ -6,7 +6,6 @@ import HomeSection from "./Home";
 import AboutSection from "./About";
 import ProjectSection from "./Project";
 import ContactPage from "./Contact";
-import Cursor from "../others/Cursor";
 import { ExperienceDekstopSection, ExperienceMobileSection } from "./Exp";
 import CertifiaceSection from "./Certificate";
 import Header from "../Nav/Header";
