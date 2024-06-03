@@ -1,3 +1,5 @@
+import {motion} from 'framer-motion'
+
 // components/3dGallery.js
 
 const images = [
