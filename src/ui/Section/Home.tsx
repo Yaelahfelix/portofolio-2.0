@@ -4,12 +4,16 @@ import dynamic from "next/dynamic";
 import SkillAnimation from "../others/SkillAnimation";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const BubbleBackground = dynamic(() => import("../others/BubbleEffect"), {
   ssr: false,
 });
 
 export default function HomeSection() {
+  const Router = useRouter();
+
   return (
     <div className="section-default relative overflow-hidden flex justify-center">
       <BubbleBackground />
@@ -20,9 +24,9 @@ export default function HomeSection() {
           A Fullstack Software Engineer
         </p>
         <SkillAnimation />
-        <button className="mt-5 px-6 py-4 border-white border shadow-2xl shadow-blue-500/20 transition-colors hover:bg-white hover:text-black">
+        <Link className="text-center mt-5 px-6 py-4 border-white border shadow-2xl shadow-blue-500/20 transition-colors hover:bg-white hover:text-black" href="/CV_Ferdinand Felix-V2-1-1.pdf" target="_blank">
           Check Out My CV Here!
-        </button>
+        </Link>
       </div>
       {/* <div className="w-full lg:w-6/12 flex justify-center">
         <motion.div

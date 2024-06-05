@@ -14,24 +14,24 @@ interface Achievement {
 export const workOrgList: WorkOrg[] = [
   {
     name: "Ability Online Academy",
-    duration: "6 Months",
+    duration: "Feb 2024 - Present",
     job: "FullStack Web Developer (ReactJS, Laravel)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cupiditate magni sequi, voluptates in totam cumque assumenda sunt commodi beatae natus, perspiciatis eligendi? Reprehenderit, nesciunt quisquam quibusdam dolorem voluptatem molestias!",
+    "I contributed to the creation of a comprehensive learning platform for school students by utilizing ReactJS to build dynamic and responsive user interfaces, and employing Laravel to develop robust and scalable backend services. I applied TailwindCSS and Material UI to ensure a visually appealing and consistent design across the platform, working closely with the development team to implement features and troubleshoot issues, ensuring a seamless user experience. Continuously improving my technical skills and staying updated with the latest industry trends, I am committed to delivering high-quality work."
   },
   {
-    name: "OSIS SMKS Bina Nasional Informatika",
-    duration: "1 Year",
-    job: "Head Master",
+    name: "Freelance",
+    duration: "Feb 2023 - Present",
+    job: "Fullstack Web Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cupiditate magni sequi, voluptates in totam cumque assumenda sunt commodi beatae natus, perspiciatis eligendi? Reprehenderit, nesciunt quisquam quibusdam dolorem voluptatem molestias!",
+      "I develop dynamic and responsive web applications tailored to client needs, implementing Next.js for server-side rendering and static site generation to enhance website performance and SEO. I create robust and scalable backend systems with Laravel, design and build interactive user interfaces using React, and engage with clients to understand their requirements and deliver customized solutions. By staying current with industry trends and continuously improving my technical skills, I ensure top-quality results.",
   },
   {
     name: "PT Tuv Nord Indonesia",
-    duration: "4 Months",
+    duration: "Jan 2023 - May 2023",
     job: "Administration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cupiditate magni sequi, voluptates in totam cumque assumenda sunt commodi beatae natus, perspiciatis eligendi? Reprehenderit, nesciunt quisquam quibusdam dolorem voluptatem molestias!",
+      "As an office administrator, I manage inventory by recording incoming and outgoing goods, create and maintain data records to ensure accuracy and organization, and handle customer phone calls while providing excellent customer service. I ensure smooth office operations through effective coordination and management, and implement efficient inventory management practices to support business needs.",
   },
 ];
 

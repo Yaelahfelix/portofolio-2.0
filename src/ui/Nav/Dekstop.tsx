@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { NavList } from "./NavList";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NavDekstop() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,9 +35,9 @@ export default function NavDekstop() {
 
         <div className="flex items-center gap-5">
           {NavList.map((nav) => (
-            <div className="w-7 h-7 relative" key={nav.name}>
+            <Link href={nav.href} className="w-7 h-7 relative hover:scale-125 transition-transform" key={nav.name} target="_blank">
               <Image src={"/icon/contact/" + nav.file} alt={nav.name} fill />
-            </div>
+            </Link>
           ))}
         </div>
       </nav>

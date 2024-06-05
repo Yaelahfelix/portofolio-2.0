@@ -94,7 +94,13 @@ export function ExperienceMobileSection() {
           </Typography>
           <div className="flex flex-col">
             {workOrgList.map((item) => (
-              <div className="py-3" key={item.name}>
+              <motion.div
+                className="py-3"
+                initial={{ opacity: 0, x: -50 }}
+                transition={{ duration: 1 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                key={item.name}
+              >
                 <div className="flex justify-between items-center mb-2">
                   <div className="">
                     <h6 className="text-md text-teal-300 font-semibold">
@@ -105,7 +111,7 @@ export function ExperienceMobileSection() {
                   <h6 className="text-sm">{item.duration}</h6>
                 </div>
                 <p className="text-xs">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -120,7 +126,13 @@ export function ExperienceMobileSection() {
           </Typography>
           <div className="flex flex-col ">
             {achievementList.map((item) => (
-              <div className="flex justify-between items-center mb-2 gap-3 py-3" key={item.name}>
+              <motion.div
+                className="flex justify-between items-center mb-2 gap-3 py-3"
+                initial={{ opacity: 0, x: 50 }}
+                transition={{ duration: 1 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                key={item.name}
+              >
                 <div className="">
                   <h6 className="text-md text-teal-300 font-semibold">
                     {item.name}
@@ -128,7 +140,7 @@ export function ExperienceMobileSection() {
                   <h6 className="text-xs">{item.company}</h6>
                 </div>
                 <h6 className="text-xs">{item.date}</h6>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
