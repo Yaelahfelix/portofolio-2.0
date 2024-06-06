@@ -1,18 +1,17 @@
 import { achievementList, workOrgList } from "@/lib/expList";
 import { motion } from "framer-motion";
 import { Typography } from "@mui/material";
+import { orbittonFont, sourcecSansFont } from "@/lib/Fonts";
 
 export function ExperienceDekstopSection() {
   return (
     <section className="section-default ">
       <div className="flex gap-5 items-center mb-4">
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-white"
+        <h4
+          className={`bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-white ${orbittonFont.className} font-bold text-[32px]`}
         >
           Work / Organization Experience
-        </Typography>
+        </h4>
         <hr
           style={{
             height: "1px",
@@ -21,13 +20,11 @@ export function ExperienceDekstopSection() {
             background: "linear-gradient(to right, white, #4fd1c5, white)",
           }}
         />
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          className="bg-clip-text text-transparent bg-gradient-to-r from-white to-teal-300"
+        <h4
+          className={`bg-clip-text text-transparent bg-gradient-to-r from-white to-teal-300 ${orbittonFont.className} font-bold text-[32px]`}
         >
           Achievement
-        </Typography>
+        </h4>
       </div>
       <div className="flex ">
         <div className="w-6/12 pr-5">
@@ -41,14 +38,16 @@ export function ExperienceDekstopSection() {
               >
                 <div className="flex justify-between items-center mb-2">
                   <div className="">
-                    <h6 className="text-lg text-teal-300 font-semibold">
+                    <h6
+                      className={` ${orbittonFont.className} text-lg text-teal-300 font-semibold`}
+                    >
                       {item.name}
                     </h6>
                     <h6 className="text-sm">{item.job}</h6>
                   </div>
                   <h6>{item.duration}</h6>
                 </div>
-                <p className="text-xs">{item.description}</p>
+                <p className="text-sm leading-7">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -65,7 +64,9 @@ export function ExperienceDekstopSection() {
                 key={item.name}
               >
                 <div className="">
-                  <h6 className="text-lg text-teal-300 font-semibold">
+                  <h6
+                    className={` ${orbittonFont.className} text-lg text-teal-300 font-semibold`}
+                  >
                     {item.name}
                   </h6>
                   <h6 className="text-sm">{item.company}</h6>
@@ -103,7 +104,9 @@ export function ExperienceMobileSection() {
               >
                 <div className="flex justify-between items-center mb-2">
                   <div className="">
-                    <h6 className="text-md text-teal-300 font-semibold">
+                    <h6
+                      className={` ${orbittonFont.className} text-md text-teal-300 font-semibold`}
+                    >
                       {item.name}
                     </h6>
                     <h6 className="text-xs">{item.job}</h6>
@@ -134,7 +137,9 @@ export function ExperienceMobileSection() {
                 key={item.name}
               >
                 <div className="">
-                  <h6 className="text-md text-teal-300 font-semibold">
+                  <h6
+                    className={` ${orbittonFont.className} text-md text-teal-300 font-semibold`}
+                  >
                     {item.name}
                   </h6>
                   <h6 className="text-xs">{item.company}</h6>

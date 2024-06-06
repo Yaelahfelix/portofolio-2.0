@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { Inter, Orbitron } from "next/font/google";
 import "./globals.css";
-
-const orbittonFont = Orbitron({ subsets: ["latin"] });
+import { sourcecSansFont } from "@/lib/Fonts";
 
 export const metadata: Metadata = {
   title: "Ferdinand Felix",
@@ -16,8 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html
+      lang="en"
+      className="scrollbar-thin scrollbar-track-gray-900 scrollbar-thumb-slate-700"
+    >
+      <body className={`${sourcecSansFont.className}`}>{children}</body>
       <Analytics />
     </html>
   );

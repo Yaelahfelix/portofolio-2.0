@@ -1,14 +1,17 @@
 "use client";
 
+import { orbittonFont, sourcecSansFont } from "@/lib/Fonts";
 import { motion } from "framer-motion";
 export default function AboutSection() {
   return (
     <motion.div className="section-default relative">
-      <motion.h1 className="text-[56px] font-thin text-center">
+      <motion.h1
+        className={`text-[56px] font-thin text-center ${orbittonFont.className}`}
+      >
         About Me
       </motion.h1>
       <motion.div
-        className="text-center"
+        className={`${sourcecSansFont.className} text-center`}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
       >

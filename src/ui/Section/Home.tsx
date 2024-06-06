@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { orbittonFont } from "@/lib/Fonts";
 
 const BubbleBackground = dynamic(() => import("../others/BubbleEffect"), {
   ssr: false,
@@ -17,14 +18,22 @@ export default function HomeSection() {
   return (
     <div className="section-default relative overflow-hidden flex justify-center">
       <BubbleBackground />
-      <div className="w-full z-30 flex flex-col justify-center lg:w-6/12">
+      <div
+        className={`w-full z-30 flex flex-col justify-center lg:w-6/12 ${orbittonFont.className}`}
+      >
         <h3 className="-mb-3 text-center">Hi</h3>
-        <h1 className="text-[42px] text-center">I&apos;m Ferdinand Felix</h1>
+        <h1 className="text-[36px] md:text-[42px] text-center">
+          I&apos;m Ferdinand Felix
+        </h1>
         <p className="text-teal-300 text-center">
           A Fullstack Software Engineer
         </p>
         <SkillAnimation />
-        <Link className="text-center mt-5 px-6 py-4 border-white border shadow-2xl shadow-blue-500/20 transition-colors hover:bg-white hover:text-black" href="/CV_Ferdinand Felix-V2-1-1.pdf" target="_blank">
+        <Link
+          className="text-center mt-5 px-6 py-4 border-white border shadow-2xl shadow-blue-500/20 transition-colors hover:bg-white hover:text-black"
+          href="/CV_Ferdinand Felix-V2-1-1.pdf"
+          target="_blank"
+        >
           Check Out My CV Here!
         </Link>
       </div>
